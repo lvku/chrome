@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "HWPW",
+  "description": "Spider? Not sure!!",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.alcatrazcruises.com/*"],
+      "js": ["js/zepto.min.js", "js/index.js"]
+    }
+  ]
+}
