@@ -14,7 +14,7 @@ $(function() {
   var urls = [];
 
   //SearchEventDaySpan.aspx?date=06-23-2016
-  var baseUrl = "https://www.alcatrazcruises.com/SearchEventDaySpan.aspx?date=";
+  var baseUrl = "http://www.alcatrazcruises.com/SearchEventDaySpan.aspx?date=";
   var queryDate = new Date();
   for(var i = 0; i < times; i++ ){
     queryDate = (i === 0) ? queryDate : new Date(queryDate.getTime() + 5*24*60*60*1000);
