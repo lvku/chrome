@@ -40,13 +40,23 @@ $(function(){
 			if( key === 'time' ){
 				var d1 = value.split(' ');
 				var d2 = d1[0].split(':');
-				object.hour = d1[1] === 'am' ? parseInt(d2[0]) : parseInt(d2[0]) + 12;
+				object.hour = d1[1] === 'am' ? parseInt(d2[0]) : parseInt(d2[0]) < 12 ? parseInt(d2[0]) + 12 : parseInt(d2[0]);
 				object.minute = parseInt(d2[1]);
 
 			}
 
 			if( key === 'id' ){
-				object.id = value;
+				object.id = parseInt(value);
+				if( value == 3206 ){
+					object.promotionGroup = 3;
+					object.title = '恶魔岛与天使岛套票';
+				}else if( value == 3187 ){
+					object.promotionGroup = 2;
+					object.title = '恶魔岛票(晚间)';
+				}else{
+					object.promotionGroup = 1;
+					object.title = '恶魔岛票(白天)';
+				}
 			}
 			/*
 				3206 -- Alcatraz & Angel Island Combination Tour 

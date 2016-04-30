@@ -10,7 +10,7 @@ $(function() {
   btn.text(text);
 
   // each times incread 5 days
-  var times = 10; 
+  var times = 20; 
   var urls = [];
 
   //SearchEventDaySpan.aspx?date=06-23-2016
